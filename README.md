@@ -2,7 +2,7 @@
 html & css로 새해 덕담 웹페이지 만들기 (front-end)
 
 ---
-### [웹페이지 링크](https://deokdam.spartacodingclub.kr/P9tWJI2MHhks/index.html)
+### [웹페이지 링크](https://deokdam.spartacodingclub.kr/8pebFsr1jxRe/index.html)
 
 ### 웹페이지 화면
 ![img](img_webpage.png)
