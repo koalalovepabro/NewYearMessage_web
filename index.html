@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덕담 하나 주면 안 잡아먹지!</title>
+
+    <!--카톡으로 url 공유했을때 썸네일 헤드라인, 설명, 썸네일 뜨도록 설정-->>
+    <meta property="og:title" content="샛별님의 덕담 페이지"/>
+    <meta property="og:description" content="덕담 한마디 남겨주세요!"/>
+    <meta property="og:image" content="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/ogimage.png"/>
+
+    <style>
+        /*폰트설정*/
+        @font-face {
+            font-family: 'Cafe24Ssurround'; /*폰트 이름 지정*/
+            src: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/Cafe24Ssurround.woff') format('woff');
+        }
+
+        * {  /*(*): 모든것에 적용하겠다는 의미*/
+            font-family: 'Cafe24Ssurround';
+        }
+
+        /*배경설정*/
+        .background{
+            width: 100vw;
+            height: 100vh;
+
+            max-width: 450px;  /*윈도우 사이즈가 아무리 늘어나도 450px 이상으로 확대되지 않도록*/
+
+            /*배경을 이미지로 채우고, 가운데정렬(코드 3줄은 같이 쓰임)*/
+            background-image: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/bg_default.png');
+            background-position: center;
+            background-size: cover;
+
+            margin: auto;
+        }
+        body, h1, p {
+            margin: 0;   /*자동으로 margin을 갖는 것을 여백 없도록 0으로 설정*/
+        }
+        .title {
+            color:#3f3732;  /*글자 컬러 지정*/
+
+            /* background-color: green; */  /*배경색을 깔아놓고 만드는게 보기 쉬움*/
+
+            /*안에 있는 내용물들 가운데 정렬*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /*윗쪽에 여백 두기*/
+            padding-top: 5vh;     /*보는화면 세로길이의 5% 만큼*/         
+        }
+        .title > h1 {  /*title 안에 있는 h1 꾸미기*/
+            font-size: 22px;
+            background-color: white;
+
+            padding: 8px 16px;   /*하나만 쓰면 상하좌우 똑같이 여유공간 주고, 2개를 쓰면 상하 & 좌우*/
+            border-radius: 16px; /*모서리 둥글게*/
+            margin-bottom: 16px; /*박스 아랫쪽에 여유공간 주기*/
+        }
+        .title > p {
+            font-size: 18px;
+        }
+        .title > p > span{
+            font-size: 22px;
+        }
+        .btn{
+            color:white;
+            background-color: #3f3732;
+
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+
+            font-size: 18px;
+
+            /*가운데 정렬*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /*pc에서 접속해서 이 버튼 위에 마우스오버 했을때 커서 모양이 화살표가 아닌, 손 모양이 되도록*/
+            cursor: pointer;
+            
+            position: fixed;   /*화면 사이즈가 어떻게 변하더라도, 위치를 고정시켜주기*/
+            bottom: 16px;      /*밑에서 16px 떨어진 위치*/
+
+            /*가운데 정렬*/
+            left: calc(50% - 150px);  /*width가 300px이니까, 전체화면 가로 사이즈의 50%에서 절반인 150px을 빼야 배경 이미지의 가운데에 올수있음*/
+        }
+        /*덕담 소쿠리 안에 담기는 아이콘 꾸미기*/
+        .box > img {
+            width: 70px;
+            position: absolute;  /*위치를 지정해주는 모드*/
+            bottom: 50%;         /*화면 세로길이에서 아래에서 50%에 해당하는 위치*/
+            left: 20%;           /*화면 가로길이에서 왼쪽에서 20%에 해당하는 위치*/
+        }
+    </style>
+    <script src="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/free_newyear_2022.js"></script>
+    <script> let mycode = '8f99b4e539af102ac029ef17098a5030'; </script>
+</head>
+<body>
+    <div class="background">
+        <div class='title'>
+            <h1>덕담 하나 주면 안 잡아먹지!</h1>
+            <p>샛별님이 받은 덕담: <span>2개</span></p>
+        </div>
+        <div class='box'>
+            <!-- <img onclick="alert('새해복!')" src="https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/object3.png"> -->
+        </div>
+        <div class='btn'>바구니에 덕담 남기기</div>
+    </div>
+    
+</body>
+</html>
